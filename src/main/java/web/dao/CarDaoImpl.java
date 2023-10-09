@@ -20,10 +20,11 @@ public class CarDaoImpl implements CarDao {
         carList.add(new Car("WvwvrVWrauwvrr", "Pink", 30038128));
     }
 
+
     @Override
-    public List<Car> getCarByNumber(int number) {
+    public List<Car> getCarByNumber(int count) {
         return IntStream.range(0, carList.size())
-                .filter(l -> l < number)
+                .filter(l -> l < count)
                 .mapToObj(carList::get)
                 .toList();
     }
